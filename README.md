@@ -4,6 +4,8 @@
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/jonmldr/grumphp-doctrine-task.svg?style=flat-square)](https://packagist.org/packages/jonmldr/grumphp-doctrine-task)
 
+This library provides Doctrine's schema validation in Symfony projects as a GrumPHP task.
+
 ## Installation
 ````
 composer require jonmldr/grumphp-doctrine-task
