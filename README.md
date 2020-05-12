@@ -22,3 +22,6 @@ services:
         tags:
             - { name: grumphp.task, task: doctrine_schema_validate }
 ````
+
+## License
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
