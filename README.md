@@ -9,7 +9,7 @@ composer require jonmldr/grumphp-doctrine-task
 ````YAML
 services:
     task.doctrine_schema_validate:
-        class: App\Service\GrumPhp\DoctrineSchemaValidateTask
+        class: JonMldr\GrumPhpDoctrineTask\DoctrineSchemaValidateTask
         arguments:
             - '@process_builder'
             - '@formatter.raw_process'
