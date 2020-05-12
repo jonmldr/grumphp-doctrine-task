@@ -14,6 +14,11 @@ composer require jonmldr/grumphp-doctrine-task
 
 ## Configuration
 ````YAML
+# grumphp.yml
+parameters:
+    tasks:
+        doctrine_schema_validate: ~
+
 services:
     task.doctrine_schema_validate:
         class: JonMldr\GrumPhpDoctrineTask\DoctrineSchemaValidateTask
