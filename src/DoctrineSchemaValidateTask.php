@@ -40,7 +40,7 @@ class DoctrineSchemaValidateTask extends AbstractExternalTask
      */
     public function run(ContextInterface $context): TaskResultInterface
     {
-        $process = new Process(['bin/console', 'doctrine:schema:validate', '--skip-sync']);
+        $process = new Process(['php', 'bin/console', 'doctrine:schema:validate', '--skip-sync']);
         $process->run();
 
         if (!$process->isSuccessful()) {
