@@ -13,5 +13,10 @@
     },
     "require-dev": {
         "phpro/grumphp": "^0.18.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JonMldr\\GrumPhpDoctrineTask\\": "src/"
+        }
     }
 }
