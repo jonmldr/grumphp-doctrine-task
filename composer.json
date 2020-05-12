@@ -1,0 +1,12 @@
+{
+    "name": "jonmulder/grumphp-doctrine-task",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jonmldr",
+            "email": "jonmldr@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
