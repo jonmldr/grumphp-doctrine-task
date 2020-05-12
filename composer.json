@@ -1,6 +1,15 @@
 {
     "name": "jonmldr/grumphp-doctrine-task",
     "description": "This library provides Doctrine's schema validation in Symfony projects as a GrumPHP task.",
+    "keywords": [
+        "symfony",
+        "doctrine",
+        "grumphp",
+        "task",
+        "validation",
+        "scheme",
+        "commit"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
