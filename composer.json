@@ -8,5 +8,8 @@
             "email": "jonmldr@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpro/grumphp": "^0.18.0"
+    }
 }
