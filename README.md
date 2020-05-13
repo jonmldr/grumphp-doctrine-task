@@ -9,7 +9,7 @@ This library provides Doctrine's schema validation in Symfony projects as a Grum
 ## Installation
 You can install the package via composer:
 ````
-composer require jonmldr/grumphp-doctrine-task
+composer require --dev jonmldr/grumphp-doctrine-task
 ````
 
 ## Configuration
