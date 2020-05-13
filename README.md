@@ -5,6 +5,10 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/jonmldr/grumphp-doctrine-task.svg?style=flat-square)](https://packagist.org/packages/jonmldr/grumphp-doctrine-task)
 
 This library provides Doctrine's schema validation in Symfony projects as a GrumPHP task.
+> Note: this task is made for Symfony projects, it uses 'bin/console' so you don't have to configure the Doctrine CLI.
+
+## Demo
+<img src="https://user-images.githubusercontent.com/33514542/81804148-f9261e00-9518-11ea-8e92-d04d482b45ff.gif" alt="demo" width="100%" />
 
 ## Installation
 You can install the package via composer:
