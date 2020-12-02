@@ -23,7 +23,7 @@ parameters:
     tasks:
         doctrine_schema_validate:
             skip_mapping: false
-            skip_sync: false
+            skip_sync: true
             triggered_by: ['php', 'xml', 'yml']
 services:
     task.doctrine_schema_validate:
@@ -43,7 +43,7 @@ With this parameter you can skip the mapping validation check.
 
 **skip_sync**
 
-*Default: false*
+*Default: true*
 
 With this parameter you can skip checking if the mapping is in sync with the database.
 
