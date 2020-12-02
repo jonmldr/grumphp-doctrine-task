@@ -19,10 +19,10 @@
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.3"
     },
     "require-dev": {
-        "phpro/grumphp": "^0.18.0"
+        "phpro/grumphp": "^1.0"
     },
     "autoload": {
         "psr-4": {

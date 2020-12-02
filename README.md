@@ -19,10 +19,12 @@ composer require --dev jonmldr/grumphp-doctrine-task
 ## Configuration
 ````YAML
 # grumphp.yml
-parameters:
+grumphp:
     tasks:
-        doctrine_schema_validate: ~
-
+        doctrine_schema_validate:
+            skip_mapping: false
+            skip_sync: false
+            triggered_by: ['php', 'xml', 'yml']
 services:
     task.doctrine_schema_validate:
         class: JonMldr\GrumPhpDoctrineTask\DoctrineSchemaValidateTask
@@ -32,6 +34,24 @@ services:
         tags:
             - { name: grumphp.task, task: doctrine_schema_validate }
 ````
+
+**skip_mapping**
+
+*Default: false*
+
+With this parameter you can skip the mapping validation check.
+
+**skip_sync**
+
+*Default: false*
+
+With this parameter you can skip checking if the mapping is in sync with the database.
+
+**triggered_by**
+
+*Default: [php, xml, yml]*
+
+This is a list of extensions that should trigger the Doctrine task.
 
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
