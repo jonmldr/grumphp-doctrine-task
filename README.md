@@ -53,5 +53,14 @@ With this parameter you can skip checking if the mapping is in sync with the dat
 
 This is a list of extensions that should trigger the Doctrine task.
 
+## Changelog
+### Version 2.0
+- Updated to GrumPHP 1.x
+- Required PHP version 7.3 or higher (required by GrumPHP 1.x)
+- Task is also being executed during manual run
+- Option parity with [default doctrine task](https://github.com/phpro/grumphp/blob/master/doc/tasks/doctrine_orm.md)
+- Added Docker file for local development
+- Removed composer.lock file
+
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
