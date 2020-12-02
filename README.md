@@ -19,7 +19,7 @@ composer require --dev jonmldr/grumphp-doctrine-task
 ## Configuration
 ````YAML
 # grumphp.yml
-parameters:
+grumphp:
     tasks:
         doctrine_schema_validate:
             skip_mapping: false
