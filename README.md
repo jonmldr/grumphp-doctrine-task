@@ -25,14 +25,8 @@ grumphp:
             skip_mapping: false
             skip_sync: false
             triggered_by: ['php', 'xml', 'yml']
-services:
-    task.doctrine_schema_validate:
-        class: JonMldr\GrumPhpDoctrineTask\DoctrineSchemaValidateTask
-        arguments:
-            - '@process_builder'
-            - '@formatter.raw_process'
-        tags:
-            - { name: grumphp.task, task: doctrine_schema_validate }
+    extensions:
+        - JonMldr\GrumPhpDoctrineTask\ExtensionLoader
 ````
 
 **skip_mapping**
