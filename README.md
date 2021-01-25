@@ -51,7 +51,7 @@ This is a list of extensions that should trigger the Doctrine task.
 ### Version 2.1
 - Added PHP8 support
 - Added `ExtensionLoader`, see [Configuration](#Configuration).
-The service definition can be removed if you add the extension in your `grumphp.yml`.
+The service definition can be removed if you add the ExtensionLoader to your `grumphp.yml`.
 
 ### Version 2.0
 - Updated to GrumPHP 1.x
