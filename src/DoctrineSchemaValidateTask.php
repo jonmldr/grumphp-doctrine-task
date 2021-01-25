@@ -35,14 +35,15 @@ class DoctrineSchemaValidateTask extends AbstractExternalTask
     {
         $resolver = new OptionsResolver();
         $resolver->setDefaults([
+            'console_path' => 'bin/console',
             'skip_mapping' => false,
             'skip_sync' => false,
             'triggered_by' => ['php', 'xml', 'yml'],
         ]);
 
-        $resolver->addAllowedTypes('skip_mapping', ['bool']);
-        $resolver->addAllowedTypes('skip_sync', ['bool']);
-        $resolver->addAllowedTypes('triggered_by', ['array']);
+        $resolver->addAllowedTypes('skip_mapping', ['bool'])
+            ->addAllowedTypes('skip_sync', ['bool'])
+            ->addAllowedTypes('triggered_by', ['array']);
 
         return $resolver;
     }
@@ -60,7 +61,7 @@ class DoctrineSchemaValidateTask extends AbstractExternalTask
         }
 
         $arguments = $this->processBuilder->createArgumentsForCommand('php');
-        $arguments->add('bin/console');
+        $arguments->add($config['console_path']);
         $arguments->add('doctrine:schema:validate');
         $arguments->addOptionalArgument('--skip-mapping', $config['skip_mapping']);
         $arguments->addOptionalArgument('--skip-sync', $config['skip_sync']);

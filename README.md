@@ -29,6 +29,12 @@ grumphp:
         - JonMldr\GrumPhpDoctrineTask\ExtensionLoader
 ````
 
+**console_path**
+
+*Default: 'bin/console'*
+
+With this parameter you can set the path of the console to be used.
+
 **skip_mapping**
 
 *Default: false*
