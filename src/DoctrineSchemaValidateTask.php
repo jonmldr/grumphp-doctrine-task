@@ -11,7 +11,6 @@ use GrumPHP\Task\Context\ContextInterface;
 use GrumPHP\Task\Context\GitPreCommitContext;
 use GrumPHP\Task\Context\RunContext;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Process\Process;
 
 class DoctrineSchemaValidateTask extends AbstractExternalTask
 {
