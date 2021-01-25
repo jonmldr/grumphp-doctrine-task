@@ -48,6 +48,11 @@ With this parameter you can skip checking if the mapping is in sync with the dat
 This is a list of extensions that should trigger the Doctrine task.
 
 ## Changelog
+### Version 2.1
+- Added PHP8 support
+- Added `ExtensionLoader`, see [Configuration](#Configuration).
+The service definition can be removed if you add the extension in your `grumphp.yml`.
+
 ### Version 2.0
 - Updated to GrumPHP 1.x
 - Required PHP version 7.3 or higher (required by GrumPHP 1.x)
