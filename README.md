@@ -68,5 +68,8 @@ The service definition can be removed if you add the ExtensionLoader to your `gr
 - Added Docker file for local development
 - Removed composer.lock file
 
+## Supporters
+[![Stargazers repo roster for @jonmldr/grumphp-doctrine-task](https://reporoster.com/stars/jonmldr/grumphp-doctrine-task)](https://github.com/jonmldr/grumphp-doctrine-task/stargazers)
+
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
