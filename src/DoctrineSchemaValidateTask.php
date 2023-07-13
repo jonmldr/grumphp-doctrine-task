@@ -7,6 +7,7 @@ namespace JonMldr\GrumPhpDoctrineTask;
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Runner\TaskResultInterface;
 use GrumPHP\Task\AbstractExternalTask;
+use GrumPHP\Task\Config\ConfigOptionsResolver;
 use GrumPHP\Task\Context\ContextInterface;
 use GrumPHP\Task\Context\GitPreCommitContext;
 use GrumPHP\Task\Context\RunContext;
@@ -30,7 +31,7 @@ class DoctrineSchemaValidateTask extends AbstractExternalTask
     /**
      * {@inheritdoc}
      */
-    public static function getConfigurableOptions(): OptionsResolver
+    public static function getConfigurableOptions(): ConfigOptionsResolver
     {
         $resolver = new OptionsResolver();
         $resolver->setDefaults([
@@ -44,7 +45,9 @@ class DoctrineSchemaValidateTask extends AbstractExternalTask
             ->addAllowedTypes('skip_sync', ['bool'])
             ->addAllowedTypes('triggered_by', ['array']);
 
-        return $resolver;
+        return ConfigOptionsResolver::fromClosure(
+            static fn (array $options): array => $resolver->resolve($options)
+        );
     }
 
     /**

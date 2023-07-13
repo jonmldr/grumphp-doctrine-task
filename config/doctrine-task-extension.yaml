@@ -1,0 +1,8 @@
+services:
+    JonMldr\GrumPhpDoctrineTask\DoctrineSchemaValidateTask:
+        class: \JonMldr\GrumPhpDoctrineTask\DoctrineSchemaValidateTask
+        arguments:
+            - "@process_builder"
+            - "@formatter.raw_process"
+        tags:
+            - { name: grumphp.task, task: doctrine_schema_validate }

@@ -10,11 +10,10 @@ use Symfony\Component\DependencyInjection\Reference;
 
 class ExtensionLoader implements ExtensionInterface
 {
-    public function load(ContainerBuilder $container): void
+    public function imports(): iterable
     {
-        $container->register('task.doctrine_schema_validate', DoctrineSchemaValidateTask::class)
-            ->addArgument(new Reference('process_builder'))
-            ->addArgument(new Reference('formatter.raw_process'))
-            ->addTag('grumphp.task', ['task' => 'doctrine_schema_validate']);
+        $configDir = dirname(__DIR__) . '/config';
+
+        yield $configDir . '/doctrine-task-extension.yaml';
     }
 }
