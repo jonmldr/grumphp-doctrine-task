@@ -19,9 +19,7 @@
         }
     ],
     "require": {
-        "php": "^8.1"
-    },
-    "require-dev": {
+        "php": "^8.1",
         "phpro/grumphp": "^2.0"
     },
     "autoload": {
