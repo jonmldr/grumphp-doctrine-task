@@ -38,12 +38,14 @@ class DoctrineSchemaValidateTask extends AbstractExternalTask
             'console_path' => 'bin/console',
             'skip_mapping' => false,
             'skip_sync' => false,
+            'skip_property_types' => false,
             'em' => null,
             'triggered_by' => ['php', 'xml', 'yml'],
         ]);
 
         $resolver->addAllowedTypes('skip_mapping', ['bool'])
             ->addAllowedTypes('skip_sync', ['bool'])
+            ->addAllowedTypes('skip_property_types', ['bool'])
             ->addAllowedTypes('triggered_by', ['array'])
             ->addAllowedTypes('em', ['null', 'string']);
 
@@ -69,6 +71,7 @@ class DoctrineSchemaValidateTask extends AbstractExternalTask
         $arguments->add('doctrine:schema:validate');
         $arguments->addOptionalArgument('--skip-mapping', $config['skip_mapping']);
         $arguments->addOptionalArgument('--skip-sync', $config['skip_sync']);
+        $arguments->addOptionalArgument('--skip-property-types', $config['skip_property_types']);
         $em = $config['em'] ?? null;
         if ($em !== null) {
             $arguments->addOptionalArgument('--em', $em);
