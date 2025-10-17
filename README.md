@@ -77,12 +77,14 @@ This is a list of extensions that should trigger the Doctrine task.
 
 *Default: null*
 
+Require `doctrine/orm >= 3.0`.
 Specify the entity manager to be used. If not set, the default entity manager will be used.
 
 **skip_property_types**
 
-*Default: false*
+*Default: null*
 
+Require `doctrine/orm >= 3.0`.
 With this parameter you can skip checking if property types match the Doctrine types.
 
 ## Changelog
