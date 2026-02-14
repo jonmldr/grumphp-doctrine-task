@@ -56,28 +56,28 @@ This is a list of extensions that should trigger the Doctrine task.
 
 ## Changelog
 ### Version 3.1
-- Add `docker-compose.yml` file for local development
-- Allow `phpro/grumphp` Composer plugin
-- Updated Dockerfile
+* Added `docker-compose.yml` file for local development
+* Allowed `phpro/grumphp` Composer plugin
+* Updated Dockerfile
 
 ### Version 3.0
-- Upgraded GrumPHP version to `^2.0` [@erkens](https://github.com/erkens)
-- Upgraded to new `ExtensionInterface` for GrumPHP 2.x [@erkens](https://github.com/erkens)
-- Changed minimum PHP version to `8.1` [@erkens](https://github.com/erkens)
+* Upgraded GrumPHP version to `^2.0` thanks to [@erkens](https://github.com/erkens)
+* Upgraded to new `ExtensionInterface` for GrumPHP 2.x thanks to [@erkens](https://github.com/erkens)
+* Changed minimum PHP version to `8.1` thanks to [@erkens](https://github.com/erkens)
 
 ### Version 2.1
-- Added PHP8 support
-- Added `ExtensionLoader`, see [Configuration](#Configuration).
+* Added PHP8 support
+* Added `ExtensionLoader`, see [Configuration](#Configuration).
 The service definition can be removed if you add the ExtensionLoader to your `grumphp.yml`
-- Added the `console_path` option
+* Added the `console_path` option
 
 ### Version 2.0
-- Updated to GrumPHP 1.x
-- Required PHP version 7.3 or higher (required by GrumPHP 1.x)
-- Task is also being executed during manual run
-- Option parity with [default doctrine task](https://github.com/phpro/grumphp/blob/master/doc/tasks/doctrine_orm.md)
-- Added Docker file for local development
-- Removed composer.lock file
+* Updated to GrumPHP 1.x
+* Required PHP version 7.3 or higher (required by GrumPHP 1.x)
+* Task is also being executed during manual run
+* Option parity with [default doctrine task](https://github.com/phpro/grumphp/blob/master/doc/tasks/doctrine_orm.md)
+* Added Docker file for local development
+* Removed composer.lock file
 
 ## Supporters
 [![Stargazers repo roster for @jonmldr/grumphp-doctrine-task](https://reporoster.com/stars/jonmldr/grumphp-doctrine-task)](https://github.com/jonmldr/grumphp-doctrine-task/stargazers)
