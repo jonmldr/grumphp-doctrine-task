@@ -1,0 +1,5 @@
+grumphp:
+  tasks:
+    doctrine_schema_validate: ~
+  extensions:
+    - JonMldr\GrumPhpDoctrineTask\ExtensionLoader
