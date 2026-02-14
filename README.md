@@ -57,6 +57,7 @@ This is a list of extensions that should trigger the Doctrine task.
 ## Changelog
 ### Version 3.1
 - Updated Dockerfile
+- Allow `phpro/grumphp` Composer plugin
 
 ### Version 3.0
 - Upgraded GrumPHP version to `^2.0` [@erkens](https://github.com/erkens)

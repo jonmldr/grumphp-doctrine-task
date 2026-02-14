@@ -26,5 +26,10 @@
         "psr-4": {
             "JonMldr\\GrumPhpDoctrineTask\\": "src/"
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
     }
 }
