@@ -25,7 +25,26 @@ grumphp:
         doctrine_schema_validate:
             skip_mapping: false
             skip_sync: false
+            skip_property_types: false
+            em: default
             triggered_by: ['php', 'xml', 'yml']
+    extensions:
+        - JonMldr\GrumPhpDoctrineTask\ExtensionLoader
+````
+
+For multiple entity managers you can specify the entity manager to be used:
+````YAML
+# grumphp.yml
+grumphp:
+    tasks:
+        doctrine_schema_validate_application:
+            em: application
+            metadata:
+                task: doctrine_schema_validate
+        doctrine_schema_validate_reporting:
+            em: reporting
+            metadata:
+                task: doctrine_schema_validate
     extensions:
         - JonMldr\GrumPhpDoctrineTask\ExtensionLoader
 ````
@@ -54,11 +73,27 @@ With this parameter you can skip checking if the mapping is in sync with the dat
 
 This is a list of extensions that should trigger the Doctrine task.
 
+**em**
+
+*Default: null*
+
+Require `doctrine/orm >= 3.0`.
+Specify the entity manager to be used. If not set, the default entity manager will be used.
+
+**skip_property_types**
+
+*Default: null*
+
+Require `doctrine/orm >= 3.0`.
+With this parameter you can skip checking if property types match the Doctrine types.
+
 ## Changelog
 ### Version 3.1
 * Added `docker-compose.yml` file for local development
 * Allowed `phpro/grumphp` Composer plugin
 * Updated Dockerfile
+* Add `em` option thanks to [@majoskorec](https://github.com/majoskorec)
+* Add `skip_property_types` option thanks to [@majoskorec](https://github.com/majoskorec)
 
 ### Version 3.0
 * Upgraded GrumPHP version to `^2.0` thanks to [@erkens](https://github.com/erkens)
